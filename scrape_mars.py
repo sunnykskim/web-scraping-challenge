@@ -116,15 +116,12 @@ def scrape():
         sample_element = browser.find_link_by_text("Sample").first
         hemisphere["img_url"] = sample_element["href"]
         
-        # title
         hemisphere["title"] = browser.find_by_css("h2.title").text
-        
-        # Append Hemisphere Object to List
+             
         mars_hemisphere_urls.append(hemisphere)
         
         scraped_data["mars_hemisphere"] = mars_hemisphere_urls
 
-        # Navigate Backwards
         browser.back()
 
     return scraped_data
