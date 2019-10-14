@@ -25,8 +25,8 @@
       <div class="row">
         <div class="col-md-12">
           <h2>Latest Mars News</h2>
-          <h4> {{ mars_data.news_title }}</h4>
-          <p> {{mars_data.teaser_p}} </p>
+          <h4> {{ mars.news_title }}</h4>
+          <p> {{mars.teaser_p}} </p>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
       <div class="row">
         <div class="col-md-8 big_box">
           <h2>Featured Mars Image</h2>
-          <img src="{{ mars_data.featured_image_url }}" >
+          <img src="{{ mars.featured_image_url }}" width="600" height="400">
         </div>
 
         <div class="col-md-4">
@@ -43,14 +43,14 @@
             <div class="col-md-12">
               <h3>Latest Weather on Mars</h3>
               <p>
-                {{mars_data.mars_weather}}
+                {{mars.mars_weather}}
               </p>
             </div>
           </div>
 
           <div class="col-md-12">
             <h3>Fun Facts About Mars</h3>
-            {{mars_data.mars_facts_html}}
+            <table>{{mars.mars_facts_html}}></table>
           </div>
         </div>
 
